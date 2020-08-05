@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- This project shows the basic funcionality of CRUS - Create - READ - Update - DELETE -->
+<!-- There is one .js file (index.js) associated, that will do your API calls and dynamicall display our data -->
+<!-- Detailed notes on how the project works are on the index.js file -->
+
+<head>
+    <!-- USING BOOTSTRAP 4 -->
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Student Portal</title>
+</head>
+<!-- We use the onload on the body as our event that calls our initialize() js function that activates all of our necessary functions -->
+<body class="containter-fluid bg-light" onload ="initialize()">
+    <h2>Create A Student</h2>
+    <!-- This div of id = modals is where all the modals can be written to.  Location of the Modal HTML itself does not matter in this case -->
+    <div id ="modals"></div>
+    <!-- Page Content Below -->
+    <div id="pageLayout" class="d-flex row" style="padding-top: 5%">
+        <!-- Cards Displayed on Left -->
+        <div id="cardGroup" class="col-md-9 p2">
+            <!-- The div with id=students is where we write all of our student cards dynamically with js -->
+            <div class="text-center" id="students"><h2>Our Students</h2></div>
+        </div>
+
+    </div>
+</body>
+</html>

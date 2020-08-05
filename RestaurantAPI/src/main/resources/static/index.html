@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- USING BOOTSTRAP 4 -->
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Restaurant Portals</title>
+</head>
+
+<body class="containter-fluid bg-light" onload="initialize()">
+
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <img src="https://img.icons8.com/dotty/80/000000/hamburger.png"/>
+            <h4 class="align-middle">What will you eat today?</h4>
+        </ul>  
+
+    </nav>
+
+     <!-- Page Content Below -->
+    <div class="containter">
+        <img src="images/im-hungry-header.png" alt="Oops! Supposed to be carne asada photo." width = "100%" height="600px">
+    </div>
+
+    <!--  <h2>Our Restaurants</h2>
+    <div id ="modals"></div>
+   Button to Open the Create Modal
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createRestaurant">
+      Add Restaurant
+    </button>-->
+
+    <div id ="modals"></div>
+    <div class="container justify-content-center">
+        <div class="card text-center justify-content-center">
+            <div class="card-header">
+            COVID-19 Updates
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">Our Restaurants</h5>
+            <p class="card-text">To support Restaurants affected by COVID-19, we are currently featuring restaurants that deliver or have outdoor seating</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createRestaurant">
+                Add Restaurant
+            </button>
+            </div>
+        </div>
+        <div class="btn-group justify-content-center" role="group">
+            <button type="button" class="btn btn-default" onclick="getRestaurantsThatDeliver()">Delivery</button>
+            <button type="button" class="btn btn-default" onclick="getRestaurantsWithOutdoorSeating()">Outdoor Seating</button>
+            <button type="button" class="btn btn-default">Pizza</button>
+        </div>
+    </div>
+
+  
+   
+    <div id="pageLayout" class="d-flex row" style="padding-top: 5%">
+        <!-- Cards Displayed Centered -->
+        <div id="cardGroup" class="container">
+            <div id = "restaurants" class="row justify-content-md-center">
+                
+            </div>
+            <!--<div class="text-center justify-content-center" id="restaurants"></div>-->
+        </div>
+    </div>
+    <a href="https://icons8.com/icon/99341/hamburger">Hamburger icon by Icons8</a>
+
+</body>
+<footer>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://teekaywebdev.com/">TeeKayWebDev.com</a>
+    </div>
+</footer>
+</html>
